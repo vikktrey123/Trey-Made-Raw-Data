@@ -1,0 +1,222 @@
+{
+  "name": "serverinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "cdate",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "bot",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "12",
+      "storage": "1",
+      "varName2": "bots",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "17",
+      "storage": "1",
+      "varName2": "members",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "8",
+      "storage": "1",
+      "varName2": "dnd",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "9",
+      "storage": "1",
+      "varName2": "online",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "10",
+      "storage": "1",
+      "varName2": "offline",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "Idle Members Count",
+      "storage": "1",
+      "varName2": "idle",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "icon",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "emojis",
+      "name": "Store Server Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "emojil",
+      "name": "Store Server Info"
+    },
+    {
+      "storage": "1",
+      "varName": "icon",
+      "comparison": "5",
+      "value": "https://",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "title": "${tempVars(\"name\")}'s Information",
+      "author": "",
+      "color": "#FF00F7",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "error",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "fieldName": "Creation Date and Bot Join Date",
+      "message": "${tempVars(\"cdate\")}\n\n${tempVars(\"bot\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "fieldName": "Members and Bots",
+      "message": "${tempVars(\"bots\")} bots\n\n${tempVars(\"members\")} members",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "fieldName": "Member Status'",
+      "message": "${tempVars(\"online\")} Online Member(s)\n${tempVars(\"offline\")} Offline Member(s)\n${tempVars(\"dnd\")} Member(s) on Do not Disturb\n${tempVars(\"idle\")} Idle Member(s)",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "fieldName": "Emojis",
+      "message": "${tempVars(\"emojis\")} Emojis\n${tempVars(\"emojil\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "${tempVars(\"name\")}'s Information",
+      "author": "",
+      "color": "#FF00F7",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"icon\")}",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Creation Date and Bot Join Date",
+      "message": "${tempVars(\"cdate\")} <== Creation Date\n\n${tempVars(\"bot\")} <== Bot Join Date",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Members and Bots",
+      "message": "${tempVars(\"bots\")} bots\n\n${tempVars(\"members\")} members",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Member Status's",
+      "message": "${tempVars(\"online\")} Online Members\n${tempVars(\"offline\")} Offline Members\n${tempVars(\"dnd\")} Members on Do not Disturb\n${tempVars(\"idle\")} Idle Members",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Emojis",
+      "message": "${tempVars(\"emojis\")}\n${tempVars(\"emojil\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "FUJQu"
+}
