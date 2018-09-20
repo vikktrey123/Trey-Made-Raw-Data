@@ -1,0 +1,164 @@
+{
+  "name": "botinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "19",
+      "storage": "1",
+      "varName2": "prefix",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "21",
+      "storage": "1",
+      "varName2": "version",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "3",
+      "storage": "1",
+      "varName2": "guilds",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "2",
+      "storage": "1",
+      "varName2": "ping",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "28",
+      "storage": "1",
+      "varName2": "os",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "25",
+      "storage": "1",
+      "varName2": "mins",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "26",
+      "storage": "1",
+      "varName2": "sec",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "23",
+      "storage": "1",
+      "varName2": "days",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "24",
+      "storage": "1",
+      "varName2": "hours",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "32",
+      "storage": "1",
+      "varName2": "cmds",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "27",
+      "storage": "1",
+      "varName2": "ram",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "29",
+      "storage": "1",
+      "varName2": "cpu",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "title": "Info about me!",
+      "author": "",
+      "color": "#FF00F7",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Prefix",
+      "message": "${tempVars(\"prefix\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Ping and Uptime",
+      "message": "${tempVars(\"ping\")}ms\n\n${tempVars(\"days\")} day(s), ${tempVars(\"hours\")} hour(s), ${tempVars(\"mins\")} minute(s) and ${tempVars(\"sec\")} seconds",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Operating System (OS)",
+      "message": "${tempVars(\"os\")}\nIf its windows its most likely being self hosted for debugging",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Amount of Commands",
+      "message": "${tempVars(\"cmds\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Discord.js Version",
+      "message": "${tempVars(\"version\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Guilds",
+      "message": "${tempVars(\"guilds\")} servers i have been invited to!",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Amount of CPU being Used",
+      "message": "${tempVars(\"cpu\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Amount of Memory (RAM) Being used",
+      "message": "${tempVars(\"ram\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "gPnjY"
+}
