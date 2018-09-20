@@ -22,7 +22,7 @@
     },
     {
       "video": "${tempVars(\"query\")}",
-      "key": "apikey",
+      "key": "AIzaSyDtfpHzJvNPfthIAPgIVbewetedsPyxRTM",
       "info": "1",
       "resultNo": "0",
       "storage": "1",
@@ -58,7 +58,7 @@
     },
     {
       "video": "${tempVars(\"query\")}",
-      "key": "apikey,
+      "key": "apikey",
       "info": "2",
       "resultNo": "0",
       "storage": "1",
