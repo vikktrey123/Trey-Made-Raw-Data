@@ -9,7 +9,7 @@ kthxbye
 
 Some you may need an api key for like ytsearch
 
-By the way most require DBM Beta
+By the way most require DBM Beta and Mods download Mods Here https://github.com/Discord-Bot-Maker-Mods/DBM-Mods/tree/beta 
 
 Dont use NSFW unless you're fine with mostly hentai and some other shit it uses https://nekos.life/ api so expect that.
 you can observe for yourself here https://nekos.life/api/v2/endpoints
