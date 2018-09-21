@@ -8,3 +8,5 @@ im a newb dont make fun of me.
 kthxbye
 
 Some you may need an api key for like ytsearch
+
+By the way most require DBM Beta
