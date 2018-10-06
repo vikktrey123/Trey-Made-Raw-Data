@@ -1,13 +1,4 @@
-Hi!
-
-This is trey's github for Discord Bot Maker Raw data that is created by him.
-
-You may request anything you would like but please include your discord tag so i can dm it to you if you recieve it or if its to hard to make for me.
-im a newb dont make fun of me.
-
-Some you may need an api key for like ytsearch
-
-By the way most require DBM Beta and Mods download Mods Here https://github.com/Discord-Bot-Maker-Mods/DBM-Mods/tree/beta 
+Im going to be making more nsfw in the future but im stunned with the no idea traumatization affect (i dont know what i just typed christ i think im drunk) they should be made with the https://api.ksoft.si/ api. I tried giphy but thats.... something. ima try rule34 aswell.
 
 Dont use NSFW unless you're fine with mostly hentai and some other shit it uses https://nekos.life/ api so expect that.
 you can observe for yourself here https://nekos.life/api/v2/endpoints
