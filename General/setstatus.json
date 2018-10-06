@@ -1,0 +1,282 @@
+{
+  "name": "setstatus",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "19",
+      "storage": "1",
+      "varName2": "prefix",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "storage": "1",
+      "varName": "id",
+      "comparison": "1",
+      "value": "280057139458867211",
+      "iftrue": "2",
+      "iftrueVal": "9",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "id",
+      "comparison": "1",
+      "value": "284391166047420416",
+      "iftrue": "2",
+      "iftrueVal": "9",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "id",
+      "comparison": "1",
+      "value": "416961024634257437",
+      "iftrue": "2",
+      "iftrueVal": "9",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "title": "Access Denied.",
+      "author": "",
+      "color": "#62000A",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "error",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "message": "You're not Wurmple, Trey, or Diamond.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "status",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "params",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "comparison": "5",
+      "value": "online",
+      "iftrue": "2",
+      "iftrueVal": "18",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "comparison": "5",
+      "value": "idle",
+      "iftrue": "2",
+      "iftrueVal": "23",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "comparison": "5",
+      "value": "dnd",
+      "iftrue": "2",
+      "iftrueVal": "28",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "comparison": "1",
+      "value": "invis",
+      "iftrue": "2",
+      "iftrueVal": "33",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```${tempVars(\"prefix\")}setstatus (online,idle,dnd,invis)```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "status": "0",
+      "name": "Set Bot Status"
+    },
+    {
+      "title": "Activity Changed!",
+      "author": "",
+      "color": "#551a8b",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "playset",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "playset",
+      "message": "Status changed by ${member} to online!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "playset",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "status": "1",
+      "name": "Set Bot Status"
+    },
+    {
+      "title": "Status Changed!",
+      "author": "",
+      "color": "#551a8b",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "listenset",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "listenset",
+      "message": "Status changed by ${member} to idle!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "listenset",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "status": "3",
+      "name": "Set Bot Status"
+    },
+    {
+      "title": "Status Changed!",
+      "author": "",
+      "color": "#551a8b",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "watchset",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "watchset",
+      "message": "Status changed by ${member} to Do Not Disturb!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "watchset",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "status": "2",
+      "name": "Set Bot Status"
+    },
+    {
+      "title": "Status Changed!",
+      "author": "",
+      "color": "#551a8b",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "streamset",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "streamset",
+      "message": "Status changed by ${member} to Invisible",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "streamset",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "yLXOz"
+}
