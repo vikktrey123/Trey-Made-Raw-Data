@@ -1,0 +1,127 @@
+{
+  "name": "real-nsfw",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "XqtLQ",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "isnsfw",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "isnsfw",
+      "comparison": "1",
+      "value": "true",
+      "iftrue": "2",
+      "iftrueVal": "7",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "title": "🔞 No NSFW Here!",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "notnsfwembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "notnsfwembed",
+      "message": "🔞 This channel is not nsfw. Please find a nsfw channel.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "notnsfwembed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-nsfw?gifs=true",
+      "path": "title",
+      "storage": "1",
+      "varName": "title",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-nsfw?gifs=true",
+      "path": "image_url",
+      "storage": "1",
+      "varName": "url",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-nsfw?gifs=true",
+      "path": "source",
+      "storage": "1",
+      "varName": "wiki",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "ava",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "${tempVars(\"title\")}",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "${tempVars(\"wiki\")}",
+      "authorIcon": "",
+      "imageUrl": "${tempVars(\"url\")}",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Powered by KSoft.Si API",
+      "footerIcon": "${tempVars(\"ava\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
