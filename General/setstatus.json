@@ -4,18 +4,18 @@
   "restriction": "1",
   "actions": [
     {
+      "info": "19",
+      "storage": "1",
+      "varName2": "prefix",
+      "name": "Store Bot Client Info"
+    },
+    {
       "member": "1",
       "varName": "",
       "info": "1",
       "storage": "1",
       "varName2": "id",
       "name": "Store Member Info"
-    },
-    {
-      "info": "19",
-      "storage": "1",
-      "varName2": "prefix",
-      "name": "Store Bot Client Info"
     },
     {
       "storage": "1",
@@ -29,26 +29,9 @@
       "name": "Check Variable"
     },
     {
-      "storage": "1",
-      "varName": "id",
-      "comparison": "1",
-      "value": "284391166047420416",
-      "iftrue": "2",
-      "iftrueVal": "9",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Check Variable"
-    },
-    {
-      "storage": "1",
-      "varName": "id",
-      "comparison": "1",
-      "value": "416961024634257437",
-      "iftrue": "2",
-      "iftrueVal": "9",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Check Variable"
+      "comment": "^ Change ID",
+      "color": "#000000",
+      "name": "Comment"
     },
     {
       "title": "Access Denied.",
@@ -66,7 +49,7 @@
     {
       "storage": "1",
       "varName": "error",
-      "message": "You're not Wurmple, Trey, or Diamond.",
+      "message": "You're not Trey.",
       "name": "Set Embed Description"
     },
     {
@@ -87,19 +70,12 @@
       "name": "Store Command Params"
     },
     {
-      "info": "1",
-      "infoIndex": "2",
-      "storage": "1",
-      "varName": "params",
-      "name": "Store Command Params"
-    },
-    {
       "storage": "1",
       "varName": "status",
-      "comparison": "5",
+      "comparison": "1",
       "value": "online",
       "iftrue": "2",
-      "iftrueVal": "18",
+      "iftrueVal": "16",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Variable"
@@ -110,7 +86,7 @@
       "comparison": "5",
       "value": "idle",
       "iftrue": "2",
-      "iftrueVal": "23",
+      "iftrueVal": "21",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Variable"
@@ -121,7 +97,7 @@
       "comparison": "5",
       "value": "dnd",
       "iftrue": "2",
-      "iftrueVal": "28",
+      "iftrueVal": "27",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Variable"
@@ -132,7 +108,7 @@
       "comparison": "1",
       "value": "invis",
       "iftrue": "2",
-      "iftrueVal": "33",
+      "iftrueVal": "31",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Variable"
