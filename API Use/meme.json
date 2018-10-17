@@ -1,0 +1,108 @@
+{
+  "name": "meme",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "lksTn",
+  "actions": [
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-meme",
+      "path": "upvotes",
+      "storage": "1",
+      "varName": "upvotes",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-meme",
+      "path": "downvotes",
+      "storage": "1",
+      "varName": "downvotes",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-meme",
+      "path": "source",
+      "storage": "1",
+      "varName": "link",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-meme",
+      "path": "title",
+      "storage": "1",
+      "varName": "title",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-meme",
+      "path": "image_url",
+      "storage": "1",
+      "varName": "image_url",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-meme",
+      "path": "author",
+      "storage": "1",
+      "varName": "author",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "title": "${tempVars(\"title\")}",
+      "author": "${tempVars(\"author\")}",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "${tempVars(\"link\")}",
+      "authorIcon": "",
+      "imageUrl": "${tempVars(\"image_url\")}",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "👍 ${tempVars(\"upvotes\")} | 👎 ${tempVars(\"downvotes\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "0"
+}
