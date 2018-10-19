@@ -1,0 +1,42 @@
+{
+  "name": "dadjoke",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "PZyNn",
+  "actions": [
+    {
+      "behavior": "0",
+      "url": "https://icanhazdadjoke.com/",
+      "path": "joke",
+      "storage": "1",
+      "varName": "joke",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "title": "These jokes are shit.",
+      "author": "",
+      "color": "#FF00F7",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"joke\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
