@@ -1,0 +1,124 @@
+{
+  "name": "channelinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "position",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "cdate",
+      "name": "Store Channel Info Things"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "category",
+      "name": "Store Channel Info Things"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "nsfw",
+      "name": "Store Channel Info"
+    },
+    {
+      "title": "${tempVars(\"name\")}'s Information",
+      "author": "",
+      "color": "#EE2AC9",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Is Nsfw?",
+      "message": "${tempVars(\"nsfw\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Name",
+      "message": "${tempVars(\"name\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Channel ID",
+      "message": "${tempVars(\"id\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Position",
+      "message": "${tempVars(\"position\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Creation Date",
+      "message": "${tempVars(\"cdate\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Category",
+      "message": "${tempVars(\"category\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "wjIWR"
+}
