@@ -1,0 +1,201 @@
+{
+  "name": "suggest",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "GOtnx",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "sid",
+      "name": "Store Server Info"
+    },
+    {
+      "storage": "1",
+      "varName": "sid",
+      "comparison": "1",
+      "value": "436649663244926976",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "14",
+      "name": "Check Variable"
+    },
+    {
+      "info": "0",
+      "find": "502621500050767872",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "dname",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avaurl",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "suggestion",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "suggestion",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "17",
+      "name": "Check Variable"
+    },
+    {
+      "title": "Suggestion",
+      "author": "${tempVars(\"dname\")}",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "${tempVars(\"avaurl\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"suggestion\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Thank you for suggesting!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "crosssuggest",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "crosssuggest",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```css\nt!suggest (your suggestion here)```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```css\nBy the way, you're using cross server suggesting so if you want to see your suggestion use this link https://discord.gg/puhFXez```",
+      "storage": "1",
+      "varName2": "warnmsg",
+      "name": "Send Message"
+    },
+    {
+      "time": "10",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "warnmsg",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Thank you for suggesting!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "server": "0",
+      "varName": "server",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Things"
+    },
+    {
+      "id": "502626498407038983",
+      "token": "nB8MC0TU5VO_KUir4LYZYMS_n-REuRFqA8jjL3jfoA4yoMlll1pS4mlHHm2vF3252F3-",
+      "storage": "1",
+      "varName": "webhook",
+      "name": "Find Webhook"
+    },
+    {
+      "webhook": "1",
+      "varName": "webhook",
+      "message": "**Suggestion By**: ${tempVars(\"tag\")}\n**From Server:** ${tempVars(\"name\")}\nSuggestion: ${tempVars(\"crosssuggest\")}",
+      "name": "Send Message To Webhook"
+    }
+  ]
+}
