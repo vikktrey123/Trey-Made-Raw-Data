@@ -1,0 +1,88 @@
+{
+  "name": "8ball",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "voXHV",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "question",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "hex",
+      "name": "Generate Random Hex Color"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "dname",
+      "name": "Store Member Info"
+    },
+    {
+      "comment": "^ Just things essential to the api and embed",
+      "color": "#ff00ff",
+      "name": "Comment"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://8ball.delegator.com/magic/JSON/${tempVars(\"question\")}",
+      "path": "magic.answer",
+      "storage": "1",
+      "varName": "answer",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "title": "8-Ball",
+      "author": "${tempVars(\"dname\")}",
+      "color": "${tempVars(\"hex\")}",
+      "timestamp": "true",
+      "url": "https://8ball.delegator.com",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Question",
+      "message": "${tempVars(\"question\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Answer",
+      "message": "${tempVars(\"answer\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Powered by 8ball API",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
