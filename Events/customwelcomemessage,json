@@ -1,0 +1,60 @@
+{
+  "name": "customwelcomemessage",
+  "temp": "mem",
+  "event-type": "6",
+  "_id": "gdsRK",
+  "actions": [
+    {
+      "member": "2",
+      "varName": "mem",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "sname",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avaurl",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "sname",
+      "name": "Store Server Info"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"username\")} Has Joined!",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "${tempVars(\"avaurl\")}",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"avaurl\")}",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Welcome **${tempVars(\"username\")}** to **${tempVars(\"sname\")}**!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "4",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
