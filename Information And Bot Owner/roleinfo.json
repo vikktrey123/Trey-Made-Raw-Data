@@ -1,0 +1,163 @@
+{
+  "name": "roleinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "5",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "Insert a role name to get info about it: !RoleInfo [role-name]",
+      "author": "",
+      "color": "",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "error",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "roleName",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"roleName\")}",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "role": "3",
+      "varName": "role",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "3",
+      "varName": "role",
+      "info": "3",
+      "storage": "1",
+      "varName2": "color",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "3",
+      "varName": "role",
+      "info": "4",
+      "storage": "1",
+      "varName2": "position",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "cdate",
+      "name": "Store Role Things"
+    },
+    {
+      "role": "3",
+      "varName": "role",
+      "info": "3",
+      "storage": "1",
+      "varName2": "people",
+      "name": "Store Role Things"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "aop",
+      "name": "Store Role Things"
+    },
+    {
+      "title": "${tempVars(\"roleName\")}'s Information",
+      "author": "",
+      "color": "#FF00F7",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "ID",
+      "message": "${tempVars(\"id\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Creation Date",
+      "message": "${tempVars(\"cdate\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Position",
+      "message": "${tempVars(\"position\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Color",
+      "message": "${tempVars(\"color\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Members",
+      "message": "${tempVars(\"people\")} are in this role.",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "XNiLx"
+}
