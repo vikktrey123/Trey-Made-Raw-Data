@@ -1,0 +1,110 @@
+{
+  "name": "channelmake",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_CHANNELS",
+      "iftrue": "2",
+      "iftrueVal": "7",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "Access Denied.",
+      "author": "",
+      "color": "#62000A",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "no",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "no",
+      "message": "You do not have the permission to use the command channelmake. You're missing the permission Manage Channels",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "no",
+      "message": "you tried lol",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "no",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "params",
+      "name": "Store Command Params"
+    },
+    {
+      "channelName": "${tempVars(\"params\")}",
+      "topic": "",
+      "position": "",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Create Text Channel"
+    },
+    {
+      "title": "Channel Successfully Made!",
+      "author": "",
+      "color": "",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Here is the channel you requested!\n${tempVars(\"channel\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "time": "2",
+      "measurement": "2",
+      "name": "Wait"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "name": "Delete Message"
+    }
+  ],
+  "_id": "PCkWl"
+}
