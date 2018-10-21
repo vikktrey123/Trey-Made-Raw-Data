@@ -5,6 +5,13 @@
   "_id": "gdsRK",
   "actions": [
     {
+      "info": "0",
+      "find": "502623694183727114",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
       "member": "2",
       "varName": "mem",
       "info": "2",
@@ -50,8 +57,8 @@
     {
       "storage": "1",
       "varName": "embed",
-      "channel": "4",
-      "varName2": "",
+      "channel": "5",
+      "varName2": "channel",
       "storage3": "0",
       "varName3": "",
       "name": "Send Embed Message"
