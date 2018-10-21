@@ -28,18 +28,10 @@
       "name": "Store Member Info"
     },
     {
-      "server": "0",
-      "varName": "",
-      "info": "2",
-      "storage": "1",
-      "varName2": "sname",
-      "name": "Store Server Info"
-    },
-    {
       "title": "",
       "author": "${tempVars(\"username\")} Has Joined!",
       "color": "RANDOM",
-      "timestamp": "false",
+      "timestamp": "true",
       "url": "",
       "authorIcon": "${tempVars(\"avaurl\")}",
       "imageUrl": "",
@@ -51,7 +43,7 @@
     {
       "storage": "1",
       "varName": "embed",
-      "message": "Welcome **${tempVars(\"username\")}** to **${tempVars(\"sname\")}**!",
+      "message": "Welcome **${tempVars(\"username\")}** to Lenova MC!\n\nIP: **play.lenovamc.com**\nPlease read these 2 channels. <#465003383930093569>, <#464821851068039183>",
       "name": "Set Embed Description"
     },
     {
