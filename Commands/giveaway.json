@@ -1,0 +1,221 @@
+{
+  "name": "giveaway",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "vQYAN",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avaurl",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "dname",
+      "name": "Store Member Info"
+    },
+    {
+      "comment": "^ Embed Essentials",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MENTION_EVERYONE",
+      "iftrue": "2",
+      "iftrueVal": "8",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "info": "19",
+      "storage": "1",
+      "varName2": "prefix",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You cannot run this command.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "minutes",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "givenaway",
+      "name": "Store Command Params"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "parseInt(tempVars(\"minutes\"));",
+      "storage": "1",
+      "varName": "parseint",
+      "name": "Run Script"
+    },
+    {
+      "storage": "1",
+      "varName": "parseint",
+      "comparison": "0",
+      "iftrue": "2",
+      "iftrueVal": "14",
+      "iffalse": "0",
+      "iffalseVal": "13",
+      "name": "Check Variable Type"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```css\n%giveaway (time in minutes) (text)\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"dname\")}",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "${tempVars(\"avaurl\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"givenaway\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "for ${tempVars(\"minutes\")} minutes",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "varName3": "delete",
+      "storage3": "1",
+      "name": "Send Embed Message MOD"
+    },
+    {
+      "storage": "1",
+      "varName": "delete",
+      "emoji": "4",
+      "varName2": "💗",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "time": "${tempVars(\"minutes\")}",
+      "measurement": "2",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "delete",
+      "name": "Delete Message"
+    },
+    {
+      "message": "1",
+      "varName": "delete",
+      "info": "1",
+      "find": "💗",
+      "storage": "1",
+      "varName2": "reaction",
+      "name": "Find Reaction"
+    },
+    {
+      "reaction": "1",
+      "varName": "reaction",
+      "info": "6",
+      "storage": "1",
+      "varName2": "winner",
+      "name": "Store Reaction Info"
+    },
+    {
+      "member": "2",
+      "varName": "winner",
+      "info": "16",
+      "storage": "1",
+      "varName2": "winavaurl",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "winner",
+      "info": "3",
+      "storage": "1",
+      "varName2": "windname",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"winner\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"windname\")}",
+      "color": "#ff0000",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"winavaurl\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "winembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "winembed",
+      "message": "and the winner is ${tempVars(\"winner\")}! DM ${member} for your prize!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "winembed",
+      "channel": "0",
+      "varName2": "",
+      "varName3": "",
+      "storage3": "0",
+      "name": "Send Embed Message MOD"
+    }
+  ]
+}
