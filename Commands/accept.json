@@ -1,0 +1,30 @@
+{
+  "name": "accept",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "oLyBP",
+  "actions": [
+    {
+      "info": "1",
+      "find": "New (Speak to staff for a role)",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "${member} Thank you for accepting the rules, you may now access channels",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
