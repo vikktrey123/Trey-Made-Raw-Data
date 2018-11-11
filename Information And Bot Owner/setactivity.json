@@ -1,0 +1,258 @@
+{
+  "name": "setactivity",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "6",
+      "varName2": "",
+      "iftrue": "2",
+      "iftrueVal": "7",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "comment": "^ Change/Remove These",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "title": "Access Denied.",
+      "author": "",
+      "color": "#62000A",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "error",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "message": "You're not Trey.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "error",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "status",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "params",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "comparison": "5",
+      "value": "playing",
+      "iftrue": "2",
+      "iftrueVal": "15",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "comparison": "5",
+      "value": "listening",
+      "iftrue": "2",
+      "iftrueVal": "20",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "comparison": "5",
+      "value": "watching",
+      "iftrue": "2",
+      "iftrueVal": "25",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "comparison": "1",
+      "value": "streaming",
+      "iftrue": "2",
+      "iftrueVal": "30",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please enter a status.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "gameName": "${tempVars(\"params\")}",
+      "gameLink": "",
+      "name": "Set Bot Game"
+    },
+    {
+      "title": "Activity Changed!",
+      "author": "",
+      "color": "#551a8b",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "playset",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "playset",
+      "message": "Activity changed by ${member} to ``Playing ${tempVars(\"params\")}``",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "playset",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "activity": "1",
+      "nameText": "${tempVars(\"params\")}",
+      "url": "",
+      "name": "Set Bot Activity"
+    },
+    {
+      "title": "Activity Changed!",
+      "author": "",
+      "color": "#551a8b",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "listenset",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "message": "Activity changed by ${member} to ``Listening to ${tempVars(\"params\")}``",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "listenset",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "activity": "2",
+      "nameText": "${tempVars(\"params\")}",
+      "url": "",
+      "name": "Set Bot Activity"
+    },
+    {
+      "title": "Activity Changed!",
+      "author": "",
+      "color": "#551a8b",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "watchset",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "watchset",
+      "message": "Activity changed by ${member} to ``Watching ${tempVars(\"params\")}``",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "watchset",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "activity": "3",
+      "nameText": "${tempVars(\"params\")}",
+      "url": "https://twitch.tv/vikktxs",
+      "name": "Set Bot Activity"
+    },
+    {
+      "title": "Activity Changed!",
+      "author": "",
+      "color": "#551a8b",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "streamset",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "streamset",
+      "message": "Activity changed by ${member} to ``Streaming ${tempVars(\"params\")}``",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "streamset",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "yLXOz"
+}
