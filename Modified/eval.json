@@ -1,7 +1,7 @@
 {
   "name": "eval",
   "permissions": "NONE",
-  "restriction": "4",
+  "restriction": "0",
   "_id": "ZeZDe",
   "actions": [
     {
@@ -24,18 +24,10 @@
       "comparison": "1",
       "value": "${tempVars(\"bownid\")}",
       "iftrue": "2",
-      "iftrueVal": "6",
-      "iffalse": "0",
-      "iffalseVal": "",
+      "iftrueVal": "5",
+      "iffalse": "2",
+      "iffalseVal": "13",
       "name": "Check Variable"
-    },
-    {
-      "channel": "0",
-      "varName": "",
-      "message": "You're not the bot owner.",
-      "storage": "0",
-      "varName2": "",
-      "name": "Send Message"
     },
     {
       "name": "End Action Sequence"
@@ -72,12 +64,12 @@
       "name": "Run Script"
     },
     {
-      "title": "Eval - Successful ✅",
-      "author": "",
-      "color": "#2980b9",
+      "title": "",
+      "author": "${tempVars(\"requsr\")}",
+      "color": "LUMINOUS_VIVID_PINK",
       "timestamp": "true",
       "url": "",
-      "authorIcon": "",
+      "authorIcon": "${tempVars(\"reqavr\")}",
       "imageUrl": "",
       "thumbUrl": "",
       "storage": "1",
@@ -87,7 +79,7 @@
     {
       "storage": "1",
       "varName": "embed",
-      "message": "**:inbox_tray::**\n```js\n${tempVars(\"eval\")}\n```\n**:outbox_tray::**\n```js\n${tempVars(\"result\")}\n```",
+      "message": "**Input:**\n```js\n${tempVars(\"eval\")}```\n\n**Output:**\n```js\n${tempVars(\"result\")}```",
       "name": "Set Embed Description"
     },
     {
@@ -96,6 +88,17 @@
       "channel": "0",
       "varName2": "",
       "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Yeet, not you! <:youtried:482931016911290368>",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
     }
   ],
   "comType": "0",
