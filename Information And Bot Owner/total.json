@@ -1,0 +1,58 @@
+{
+  "name": "total",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "JFOwm",
+  "actions": [
+    {
+      "info": "32",
+      "storage": "1",
+      "varName2": "cmds",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "33",
+      "storage": "1",
+      "varName2": "events",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Commands",
+      "message": "${tempVars(\"cmds\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Events",
+      "message": "${tempVars(\"events\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
