@@ -1,0 +1,93 @@
+{
+  "name": "setwelcomechannel",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "hvaVF",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_GUILD",
+      "iftrue": "2",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Yeet, not you! <:youtried:482931016911290368>",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "2",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "8",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please mention a channel. like #channel-name",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "2",
+      "varName2": "channelid",
+      "name": "Store Channel Info"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "successembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "successembed",
+      "message": "Successful!\nAll Welcome and leave messages will go to ${mentionedChannel}.\nThank you for using Trey's TBot.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "successembed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
