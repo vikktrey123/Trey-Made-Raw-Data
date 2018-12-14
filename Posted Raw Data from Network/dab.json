@@ -1,0 +1,59 @@
+{
+  "name": "dab",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "ErrBE",
+  "actions": [
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-image?tag=dab",
+      "path": "url",
+      "storage": "1",
+      "varName": "url",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.ksoft.si/images/random-image?tag=dab",
+      "path": "snowflake",
+      "storage": "1",
+      "varName": "snowflake",
+      "debugMode": "1",
+      "headers": "Authorization: Token <Your Token Here>",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "title": "Bitch Dab!",
+      "author": "",
+      "color": "#FF00F7",
+      "timestamp": "false",
+      "url": "${tempVars(\"url\")}",
+      "authorIcon": "",
+      "imageUrl": "${tempVars(\"url\")}",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Snowflake/ID: ${tempVars(\"snowflake\")} | KSoft.Si API",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
