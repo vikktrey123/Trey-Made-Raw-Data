@@ -1,0 +1,181 @@
+{
+  "name": "role",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "pSAPH",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_ROLES",
+      "iftrue": "2",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Yeet, not you! <:youtried:525387071263866880>",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "botmem",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "2",
+      "varName": "botmem",
+      "permission": "MANAGE_ROLES",
+      "iftrue": "2",
+      "iftrueVal": "8",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "The bot does not have the permission ``MANAGE_ROLES``",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "11",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Mention a user to role.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "role",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"role\")}",
+      "storage": "1",
+      "varName": "foundrole",
+      "name": "Find Role"
+    },
+    {
+      "storage": "1",
+      "varName": "foundrole",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "2",
+      "iftrueVal": "16",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "That role does not exist. :x:",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"id\")}",
+      "storage": "1",
+      "varName": "roled",
+      "name": "Find Member"
+    },
+    {
+      "role": "3",
+      "varName": "foundrole",
+      "info": "2",
+      "storage": "1",
+      "varName2": "rolename",
+      "name": "Store Role Info"
+    },
+    {
+      "member": "2",
+      "varName": "roled",
+      "role": "3",
+      "varName2": "foundrole",
+      "iftrue": "2",
+      "iftrueVal": "23",
+      "iffalse": "0",
+      "iffalseVal": "1",
+      "name": "Check If Member has Role"
+    },
+    {
+      "member": "2",
+      "varName2": "roled",
+      "role": "3",
+      "varName": "foundrole",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${mentionedUser}, +${tempVars(\"rolename\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "2",
+      "varName2": "roled",
+      "role": "3",
+      "varName": "foundrole",
+      "name": "Remove Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${mentionedUser}, -${tempVars(\"rolename\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
