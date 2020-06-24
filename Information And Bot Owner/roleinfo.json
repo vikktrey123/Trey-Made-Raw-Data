@@ -1,3 +1,4 @@
+
 {
   "name": "roleinfo",
   "permissions": "NONE",
@@ -5,8 +6,8 @@
   "actions": [
     {
       "condition": "0",
-      "comparison": "0",
-      "value": "1",
+      "comparison": "2",
+      "value": "0",
       "iftrue": "2",
       "iftrueVal": "5",
       "iffalse": "0",
@@ -14,7 +15,7 @@
       "name": "Check Parameters"
     },
     {
-      "title": "Insert a role name to get info about it: !RoleInfo [role-name]",
+      "title": "Insert a role name to get info about it: t!roleinfo [role-name]",
       "author": "",
       "color": "",
       "timestamp": "true",
@@ -49,6 +50,17 @@
       "storage": "1",
       "varName": "role",
       "name": "Find Role"
+    },
+    {
+      "storage": "1",
+      "varName": "role",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "22",
+      "name": "Check Variable"
     },
     {
       "role": "3",
@@ -99,7 +111,7 @@
       "name": "Store Role Things"
     },
     {
-      "title": "${tempVars(\"roleName\")}'s Information",
+      "title": "",
       "author": "",
       "color": "#FF00F7",
       "timestamp": "true",
@@ -157,7 +169,19 @@
       "channel": "0",
       "varName2": "",
       "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "That role does not exist. :x:",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
     }
   ],
-  "_id": "XNiLx"
+  "_id": "XNiLx",
+  "comType": "0"
 }
