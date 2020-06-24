@@ -12,12 +12,54 @@
       "name": "Store Server Things"
     },
     {
+      "date": "${tempVars(\"cdate\")}",
+      "info": "8",
+      "storage": "1",
+      "varName": "cmonth",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"cdate\")}",
+      "info": "4",
+      "storage": "1",
+      "varName": "cdnum",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"cdate\")}",
+      "info": "5",
+      "storage": "1",
+      "varName": "cyear",
+      "name": "Store Date Info"
+    },
+    {
       "server": "0",
       "varName": "",
       "info": "4",
       "storage": "1",
       "varName2": "bot",
       "name": "Store Server Things"
+    },
+    {
+      "date": "${tempVars(\"bot\")}",
+      "info": "8",
+      "storage": "1",
+      "varName": "bjmon",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"bot\")}",
+      "info": "4",
+      "storage": "1",
+      "varName": "bjday",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"bot\")}",
+      "info": "5",
+      "storage": "1",
+      "varName": "bjyear",
+      "name": "Store Date Info"
     },
     {
       "server": "0",
@@ -84,6 +126,42 @@
       "name": "Store Server Info"
     },
     {
+      "text": "${tempVars(\"idle\")}",
+      "text2": "undefined",
+      "text3": "0",
+      "info": "0",
+      "storage": "1",
+      "varName": "ridle",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"offline\")}",
+      "text2": "undefined",
+      "text3": "0",
+      "info": "0",
+      "storage": "1",
+      "varName": "roffline",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"online\")}",
+      "text2": "undefined",
+      "text3": "0",
+      "info": "0",
+      "storage": "1",
+      "varName": "ronline",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"dnd\")}",
+      "text2": "undefined",
+      "text3": "0",
+      "info": "0",
+      "storage": "1",
+      "varName": "rdnd",
+      "name": "Replace Text"
+    },
+    {
       "server": "0",
       "varName": "",
       "info": "6",
@@ -102,16 +180,16 @@
     {
       "storage": "1",
       "varName": "icon",
-      "comparison": "5",
-      "value": "https://",
+      "comparison": "0",
+      "value": "",
       "iftrue": "2",
-      "iftrueVal": "21",
+      "iftrueVal": "30",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Variable"
     },
     {
-      "title": "${tempVars(\"name\")}'s Information",
+      "title": "",
       "author": "",
       "color": "#FF00F7",
       "timestamp": "true",
@@ -127,23 +205,15 @@
       "storage": "1",
       "varName": "error",
       "fieldName": "Creation Date and Bot Join Date",
-      "message": "${tempVars(\"cdate\")}\n\n${tempVars(\"bot\")}",
+      "message": "Created on ${tempVars(\"cmonth\")}/${tempVars(\"cdnum\")}/${tempVars(\"cyear\")}\nBot Joined on ${tempVars(\"bjmon\")}/${tempVars(\"bjday\")}/${tempVars(\"cyear\")}",
       "inline": "1",
       "name": "Add Embed Field"
     },
     {
       "storage": "1",
       "varName": "error",
-      "fieldName": "Members and Bots",
-      "message": "${tempVars(\"bots\")} bots\n\n${tempVars(\"members\")} members",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "error",
-      "fieldName": "Member Status'",
-      "message": "${tempVars(\"online\")} Online Member(s)\n${tempVars(\"offline\")} Offline Member(s)\n${tempVars(\"dnd\")} Member(s) on Do not Disturb\n${tempVars(\"idle\")} Idle Member(s)",
+      "fieldName": "Member",
+      "message": "${tempVars(\"ronline\")} Online Members\n${tempVars(\"roffline\")} Offline Members\n${tempVars(\"rdnd\")} Members on Do not Disturb\n${tempVars(\"ridle\")} Idle Members\n${tempVars(\"bots\")} Bots\n${tempVars(\"members\")} Members",
       "inline": "0",
       "name": "Add Embed Field"
     },
@@ -166,7 +236,7 @@
       "name": "End Action Sequence"
     },
     {
-      "title": "${tempVars(\"name\")}'s Information",
+      "title": "",
       "author": "",
       "color": "#FF00F7",
       "timestamp": "true",
@@ -182,23 +252,15 @@
       "storage": "1",
       "varName": "embed",
       "fieldName": "Creation Date and Bot Join Date",
-      "message": "${tempVars(\"cdate\")} <== Creation Date\n\n${tempVars(\"bot\")} <== Bot Join Date",
+      "message": "Created on ${tempVars(\"cmonth\")}/${tempVars(\"cdnum\")}/${tempVars(\"cyear\")}\nBot Joined on ${tempVars(\"bjmon\")}/${tempVars(\"cdnum\")}/${tempVars(\"cyear\")}",
       "inline": "1",
       "name": "Add Embed Field"
     },
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Members and Bots",
-      "message": "${tempVars(\"bots\")} bots\n\n${tempVars(\"members\")} members",
-      "inline": "1",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Member Status's",
-      "message": "${tempVars(\"online\")} Online Members\n${tempVars(\"offline\")} Offline Members\n${tempVars(\"dnd\")} Members on Do not Disturb\n${tempVars(\"idle\")} Idle Members",
+      "fieldName": "Members",
+      "message": "${tempVars(\"ronline\")} Online Members\n${tempVars(\"roffline\")} Offline Members\n${tempVars(\"rdnd\")} Members on Do not Disturb\n${tempVars(\"ridle\")} Idle Members\n${tempVars(\"bots\")} Bots\n${tempVars(\"members\")} Members",
       "inline": "0",
       "name": "Add Embed Field"
     },
@@ -206,7 +268,7 @@
       "storage": "1",
       "varName": "embed",
       "fieldName": "Emojis",
-      "message": "${tempVars(\"emojis\")}\n${tempVars(\"emojil\")}",
+      "message": "${tempVars(\"emojis\")} Emojis\n${tempVars(\"emojil\")}",
       "inline": "0",
       "name": "Add Embed Field"
     },
