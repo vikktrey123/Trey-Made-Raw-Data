@@ -1,7 +1,5 @@
-
-
     {
-      "name": "fbi",
+      "name": "dab
       "permissions": "NONE",
       "restriction": "1",
       "_id": "ErrBE",
@@ -10,7 +8,7 @@
           "token": "",
           "user": "",
           "pass": "",
-          "url": "https://api.ksoft.si/images/random-image?tag=fbi",
+          "url": "https://api.ksoft.si/images/random-image?tag=dab
           "path": "url",
           "storage": "1",
           "varName": "url",
@@ -22,7 +20,7 @@
           "token": "",
           "user": "",
           "pass": "",
-          "url": "https://api.ksoft.si/images/random-image?tag=fbi",
+          "url": "https://api.ksoft.si/images/random-image?tag=dab
           "path": "snowflake",
           "storage": "1",
           "varName": "snowflake",
@@ -31,7 +29,7 @@
           "name": "Store Json From WebAPI"
         },
         {
-          "title": "FBI OPEN UP",
+          "title": "Bitch Dab!
           "author": "",
           "color": "#FF00F7",
           "timestamp": "false",
