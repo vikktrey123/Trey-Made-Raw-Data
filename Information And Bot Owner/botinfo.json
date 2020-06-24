@@ -4,15 +4,30 @@
   "restriction": "1",
   "actions": [
     {
-      "info": "19",
-      "storage": "1",
-      "varName2": "prefix",
-      "name": "Store Bot Client Info"
-    },
-    {
       "info": "21",
       "storage": "1",
       "varName2": "version",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "botmem",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "2",
+      "varName": "botmem",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avaurl",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "31",
+      "storage": "1",
+      "varName2": "node",
       "name": "Store Bot Client Info"
     },
     {
@@ -22,45 +37,9 @@
       "name": "Store Bot Client Info"
     },
     {
-      "info": "2",
-      "storage": "1",
-      "varName2": "ping",
-      "name": "Store Bot Client Info"
-    },
-    {
       "info": "28",
       "storage": "1",
       "varName2": "os",
-      "name": "Store Bot Client Info"
-    },
-    {
-      "info": "25",
-      "storage": "1",
-      "varName2": "mins",
-      "name": "Store Bot Client Info"
-    },
-    {
-      "info": "26",
-      "storage": "1",
-      "varName2": "sec",
-      "name": "Store Bot Client Info"
-    },
-    {
-      "info": "23",
-      "storage": "1",
-      "varName2": "days",
-      "name": "Store Bot Client Info"
-    },
-    {
-      "info": "24",
-      "storage": "1",
-      "varName2": "hours",
-      "name": "Store Bot Client Info"
-    },
-    {
-      "info": "32",
-      "storage": "1",
-      "varName2": "cmds",
       "name": "Store Bot Client Info"
     },
     {
@@ -83,7 +62,7 @@
       "url": "",
       "authorIcon": "",
       "imageUrl": "",
-      "thumbUrl": "",
+      "thumbUrl": "${tempVars(\"avaurl\")}",
       "storage": "1",
       "varName": "embed",
       "name": "Create Embed Message"
@@ -91,65 +70,25 @@
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Prefix",
-      "message": "${tempVars(\"prefix\")}",
+      "fieldName": "OS and Guilds",
+      "message": "${tempVars(\"os\")}\n${tempVars(\"guilds\")} Guilds",
       "inline": "0",
       "name": "Add Embed Field"
     },
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Ping and Uptime",
-      "message": "${tempVars(\"ping\")}ms\n\n${tempVars(\"days\")} day(s), ${tempVars(\"hours\")} hour(s), ${tempVars(\"mins\")} minute(s) and ${tempVars(\"sec\")} seconds",
+      "fieldName": "Versions",
+      "message": "DiscordJS = ${tempVars(\"version\")}\nNodeJS = ${tempVars(\"node\")}",
       "inline": "0",
       "name": "Add Embed Field"
     },
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Operating System (OS)",
-      "message": "${tempVars(\"os\")}\nIf its windows its most likely being self hosted for debugging",
+      "fieldName": "Usage",
+      "message": "${tempVars(\"cpu\")} CPU Usage\n${tempVars(\"ram\")} RAM Usage",
       "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Amount of Commands",
-      "message": "${tempVars(\"cmds\")}",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Discord.js Version",
-      "message": "${tempVars(\"version\")}",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Guilds",
-      "message": "${tempVars(\"guilds\")} servers i have been invited to!",
-      "inline": "1",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Amount of CPU being Used",
-      "message": "${tempVars(\"cpu\")}",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Amount of Memory (RAM) Being used",
-      "message": "${tempVars(\"ram\")}",
-      "inline": "1",
       "name": "Add Embed Field"
     },
     {
