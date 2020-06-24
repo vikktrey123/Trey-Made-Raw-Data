@@ -1,0 +1,347 @@
+{
+  "name": "userinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "23",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "color",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "17",
+      "storage": "1",
+      "varName2": "rolel",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "10",
+      "storage": "1",
+      "varName2": "owner",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "14",
+      "storage": "1",
+      "varName2": "game",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "cdate",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Things"
+    },
+    {
+      "date": "${tempVars(\"cdate\")}",
+      "info": "8",
+      "storage": "1",
+      "varName": "mnum",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"cdate\")}",
+      "info": "4",
+      "storage": "1",
+      "varName": "dnum",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"cdate\")}",
+      "info": "5",
+      "storage": "1",
+      "varName": "yearnum",
+      "name": "Store Date Info"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#FF00F7",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"avatar\")}",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Account Creation Date",
+      "message": "${tempVars(\"mnum\")}/${tempVars(\"dnum\")}/${tempVars(\"yearnum\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Color",
+      "message": "${tempVars(\"color\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Playing/Game/Listening to/Watching",
+      "message": "${tempVars(\"game\") || \"None\"}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Roles",
+      "message": "${tempVars(\"rolel\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Is Owner?",
+      "message": "${tempVars(\"owner\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Tag and ID",
+      "message": "${tempVars(\"tag\")}\n${tempVars(\"id\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "1",
+      "varName3": "message4replace",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "color2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "14",
+      "storage": "1",
+      "varName2": "game2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "17",
+      "storage": "1",
+      "varName2": "rolel2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "10",
+      "storage": "1",
+      "varName2": "owner2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "cdate2",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "tag2",
+      "name": "Store Member Things"
+    },
+    {
+      "date": "${tempVars(\"cdate2\")}",
+      "info": "8",
+      "storage": "1",
+      "varName": "mnum2",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"cdate2\")}",
+      "info": "4",
+      "storage": "1",
+      "varName": "dnum2",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"cdate2\")}",
+      "info": "5",
+      "storage": "1",
+      "varName": "yearnum2",
+      "name": "Store Date Info"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#FF00F7",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"avatar2\")}",
+      "storage": "1",
+      "varName": "embed2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "fieldName": "Account Creation Date",
+      "message": "${tempVars(\"mnum2\")}/${tempVars(\"dnum2\")}/${tempVars(\"yearnum2\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "fieldName": "Color",
+      "message": "${tempVars(\"color2\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "fieldName": "Playing/Listening to",
+      "message": "${tempVars(\"game2\") || \"None\"}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "fieldName": "Roles",
+      "message": "${tempVars(\"rolel2\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "fieldName": "Is Owner?",
+      "message": "${tempVars(\"owner2\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "fieldName": "Tag and ID",
+      "message": "${tempVars(\"tag2\")}\n${tempVars(\"id2\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "ShwQz"
+}
